@@ -1,11 +1,9 @@
-Summary: Printer Configuration for Triumph Adler Printer
-
-
 %define _install_dir /usr/share/printers/triumph-adler/
 %define _version 20140115
 
 
 Name: triumph-adler
+Summary: Printer Configuration for Triumph Adler Printer
 Version: %{_version}
 Release: 1
 License: proprietary
@@ -25,8 +23,6 @@ adler website in an rpm so they are easy to deploy.
 chown -R root:root .
 
 %install
-echo $RPM_BUILD_DIR
-echo $RPM_BUILD_ROOT
 find . -type d -exec install -d $RPM_BUILD_ROOT%{_install_dir}{} \;
 find . -type f -exec install {} $RPM_BUILD_ROOT%{_install_dir}{} \;
 
